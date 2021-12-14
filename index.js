@@ -12,7 +12,7 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 4000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 const db = process.env.DB_URL;
 
@@ -70,7 +70,7 @@ app.get('/todo/:category',async (req, res)=>{
     if(allCategoryTodos){
         return res.status(200).json({
             message: `${category} todos fetched successfully`,
-            data: allcategoryTodos
+            data: allCategoryTodos
         });
     }else{
         return res.status(500).json({

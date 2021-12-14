@@ -1,6 +1,9 @@
 {
   "name": "mad-todo-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "description": "todo backend",
   "main": "index.js",
   "type": "module",
